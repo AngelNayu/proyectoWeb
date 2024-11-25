@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/estilos.css">
+</head>
+<body>
+    <h1>Agregar un usuario nuevo</h1>
+    <form action="/add" method="POST">
+        <label for="name">Nombre:</label>
+        <input type="text" name="name" id="name" required>
+
+        <label for="email">Correo electronico:</label>
+        <input type="email" name="email" id="email" required>
+
+        <button type="submit"> Registrar</button>
+    </form>
+    <a href="/">Volver a la lista de usuarios</a>
+</body>
+</html>

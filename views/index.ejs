@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="/estilos.css">
+</head>
+<body>
+    
+    <h1>Listar usuarios</h1>
+
+    <!-- agregar user -->
+     <a href="/add">
+        <button>Agregar usuario</button>
+     </a>
+
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nombre|</th>
+            <th>Email</th>
+            <th>Acciones</th>
+        </tr>
+        <!-- JS -->
+         <% users.forEach(user =>{  %>
+        <tr>
+            <td><%=user.id %></td>
+            <td><%=user.name %></td>
+            <td><%=user.email %></td>
+            <td>
+                <a href="/edit/<%= user.id %>">Editar</a>|
+                <a href="/delete/<%= user.id %>">Eliminar</a>
+            </td>
+
+        </tr>
+        <% }); %>
+    </table>
+
+    
+</body>
+</html>

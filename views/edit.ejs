@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/estilos.css">
+</head>
+<body>
+    <h1>Editar Usuario</h1>
+    <form action="/update/<%=user.id%>" method="POST">
+        <label for="name">Nombre:</label>
+        <input type="text" name="name" id="name" value="<%= user.name %>" required>
+        
+        <label for="email">Correo:</label>
+        <input type="email" name="email" id="email" value="<%= user.email %>" required>
+        
+        <button type="submit">Actualizar</button>
+
+    </form>
+
+    <a href="/">Volver</a>
+    
+</body>
+</html>
